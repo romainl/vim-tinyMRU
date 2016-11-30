@@ -28,9 +28,9 @@ function! s:MRU(command, arg)
 endfunction
 
 " commands
-command! -nargs=1 -complete=customlist,<sid>MRUComplete ME call <sid>MRU('edit', <f-args>)
-command! -nargs=1 -complete=customlist,<sid>MRUComplete MS call <sid>MRU('split', <f-args>)
-command! -nargs=1 -complete=customlist,<sid>MRUComplete MV call <sid>MRU('vsplit', <f-args>)
-command! -nargs=1 -complete=customlist,<sid>MRUComplete MT call <sid>MRU('tabedit', <f-args>)
+command! -nargs=1 -complete=customlist,<sid>MRUComplete ME call <sid>MRU('edit', fnameescape(<f-args>))
+command! -nargs=1 -complete=customlist,<sid>MRUComplete MS call <sid>MRU('split', fnameescape(<f-args>))
+command! -nargs=1 -complete=customlist,<sid>MRUComplete MV call <sid>MRU('vsplit', fnameescape(<f-args>))
+command! -nargs=1 -complete=customlist,<sid>MRUComplete MT call <sid>MRU('tabedit', fnameescape(<f-args>))
 
 let &cpo = s:save_cpo
