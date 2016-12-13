@@ -18,19 +18,10 @@ function! s:MRUComplete(ArgLead, CmdLine, CursorPos)
     return filter(copy(v:oldfiles), 'v:val =~ a:ArgLead')
 endfunction
 
-" MRU function
-function! s:MRU(command, arg)
-    if a:command == "tabedit"
-        execute a:command . " " . a:arg . "\|lcd %:p:h"
-    else
-        execute a:command . " " . a:arg
-    endif
-endfunction
-
 " commands
-command! -nargs=1 -complete=customlist,<sid>MRUComplete ME call <sid>MRU('edit', fnameescape(<f-args>))
-command! -nargs=1 -complete=customlist,<sid>MRUComplete MS call <sid>MRU('split', fnameescape(<f-args>))
-command! -nargs=1 -complete=customlist,<sid>MRUComplete MV call <sid>MRU('vsplit', fnameescape(<f-args>))
-command! -nargs=1 -complete=customlist,<sid>MRUComplete MT call <sid>MRU('tabedit', fnameescape(<f-args>))
+command! -nargs=1 -complete=customlist,<sid>MRUComplete ME execute 'edit' . <f-args>
+command! -nargs=1 -complete=customlist,<sid>MRUComplete MS execute 'split' . <f-args>
+command! -nargs=1 -complete=customlist,<sid>MRUComplete MV execute 'vsplit' . <f-args>
+command! -nargs=1 -complete=customlist,<sid>MRUComplete MT execute 'tabedit' . <f-args>
 
 let &cpo = s:save_cpo
