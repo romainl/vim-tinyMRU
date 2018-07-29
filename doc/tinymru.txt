@@ -51,26 +51,26 @@ on Windows... >
 *:ME* <C-d>
 
     Functionally identical to |:edit| <Tab> or |:edit| <C-d>. Suggestions are
-    pulled from |v:oldfiles|.
+    pulled from |v:oldfiles| with non-readable files filtered out.
 
 *:MS* <Tab>
 *:MS* <C-d>
 
     Functionally identical to |:split| <Tab> or |:split| <C-d>. Suggestions are
-    pulled from |v:oldfiles|.
+    pulled from |v:oldfiles| with non-readable files filtered out.
 
 *:MV* <Tab>
 *:MV* <C-d>
 
     Functionally identical to |:vsplit| <Tab> or |:vsplit| <C-d>. Suggestions are
-    pulled from |v:oldfiles|.
+    pulled from |v:oldfiles| with non-readable files filtered out.
 
 *:MT* <Tab>
 *:MT* <C-d>
 
     Functionally identical to |:tabedit| <Tab> or |:tabedit| <C-d>. Suggestions
-    are pulled from |v:oldfiles|. The local current directory is set to the
-    directory of the chosen file.
+    are pulled from |v:oldfiles| with non-readable files filtered out. The
+    local current directory is set to the directory of the chosen file.
 
 ==============================================================================
  4. TIPS AND TRICKS                                            *tinymru-tricks*
@@ -78,7 +78,7 @@ on Windows... >
 If you find Ex commands too verbose, it's easy to use the commands above in
 custom mappings.
 
-This mapping does the same thing as |:ME| <Tab> but with only one keypress: >
+This mapping does the same thing as |:ME| <Tab> but with only one keystroke: >
 
     set wildcharm=<C-z>
     nnoremap <F5> :ME <C-z>
