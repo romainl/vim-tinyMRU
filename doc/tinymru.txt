@@ -48,25 +48,25 @@ on Windows... >
  3. USAGE                                                       *tinymru-usage*
 
 *:ME* <Tab>
-*:ME* <C-d>
+:ME <C-d>
 
     Functionally identical to |:edit| <Tab> or |:edit| <C-d>. Suggestions are
     pulled from |v:oldfiles| with non-readable files filtered out.
 
 *:MS* <Tab>
-*:MS* <C-d>
+:MS <C-d>
 
     Functionally identical to |:split| <Tab> or |:split| <C-d>. Suggestions are
     pulled from |v:oldfiles| with non-readable files filtered out.
 
 *:MV* <Tab>
-*:MV* <C-d>
+:MV <C-d>
 
     Functionally identical to |:vsplit| <Tab> or |:vsplit| <C-d>. Suggestions are
     pulled from |v:oldfiles| with non-readable files filtered out.
 
 *:MT* <Tab>
-*:MT* <C-d>
+:MT <C-d>
 
     Functionally identical to |:tabedit| <Tab> or |:tabedit| <C-d>. Suggestions
     are pulled from |v:oldfiles| with non-readable files filtered out. The
